@@ -1,0 +1,203 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 134217728 bytes for Failed to commit area from 0x0000000081a00000 to 0x0000000089a00000 of length 134217728.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (c:/cygwin64/tmp/openjdk-jdk11u-windows-x64-hotspot/workspace/build/src/src/hotspot/os/windows/os_windows.cpp:3272), pid=12208, tid=7732
+#
+# JRE version:  (11.0.3+7) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.3+7, mixed mode, aot, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Djava.awt.headless=true -Dscanner.home=C:\sonar-scanner-4.4.0.2170-windows\bin\.. -Dproject.home=C:\Users\Gary\Documents\2S 2020\SA\lab\Practica7_SA org.sonarsource.scanner.cli.Main -Dsonar.projectKey=com-example:SA -Dsonar.sources=. -Dsonar.host.url=http://localhost:9123 -Dsonar.login=ac995574fb4d8e0b3b91c2851a1cddb2672d1b21
+
+Host: Intel(R) Core(TM) i5-6200U CPU @ 2.30GHz, 4 cores, 7G,  Windows 8.1 , 64 bit Build 9600 (6.3.9600.19358)
+Time: Fri Sep 25 19:03:36 2020 Hora estándar, América Central elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000002b52551000):  JavaThread "Unknown thread" [_thread_in_vm, id=7732, stack(0x0000002b51c00000,0x0000002b51d00000)]
+
+Stack: [0x0000002b51c00000,0x0000002b51d00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x5d6c1a]
+V  [jvm.dll+0x70ac7f]
+V  [jvm.dll+0x70c30b]
+V  [jvm.dll+0x70c9d3]
+V  [jvm.dll+0x23f608]
+V  [jvm.dll+0x5d415a]
+V  [jvm.dll+0x5c9055]
+V  [jvm.dll+0x2f3d1c]
+V  [jvm.dll+0x2f3ba2]
+V  [jvm.dll+0x2f8856]
+V  [jvm.dll+0x339d3f]
+V  [jvm.dll+0x339770]
+V  [jvm.dll+0x2d1b98]
+V  [jvm.dll+0x2d2ce6]
+V  [jvm.dll+0x6e6e87]
+V  [jvm.dll+0x6e85df]
+V  [jvm.dll+0x346c19]
+V  [jvm.dll+0x6cdcc0]
+V  [jvm.dll+0x3ae04f]
+V  [jvm.dll+0x3b03b1]
+C  [java.exe+0x35fb]
+C  [java.exe+0x1986c]
+C  [KERNEL32.DLL+0x13f2]
+C  [ntdll.dll+0x154f4]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x0000002b503a1440, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x0000002b52563800 GCTaskThread "GC Thread#0" [stack: 0x0000002b51ee0000,0x0000002b51fe0000] [id=9124]
+  0x0000002b52595800 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000002b6ba30000,0x0000002b6bb30000] [id=3160]
+  0x0000002b52596800 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000002b6bb30000,0x0000002b6bc30000] [id=1176]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffbe3f107b7]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000002b5254ed60] Heap_lock - owner thread: 0x0000002b52551000
+
+Heap address: 0x0000000081a00000, size: 2022 MB, Compressed Oops mode: Non-zero based: 0x0000000081a00000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff793510000 - 0x00007ff79355a000 	C:\sonar-scanner-4.4.0.2170-windows\jre\bin\java.exe
+0x00007ffc19950000 - 0x00007ffc19afd000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffc188d0000 - 0x00007ffc18a0f000 	C:\WINDOWS\system32\KERNEL32.DLL
+0x00007ffc16ec0000 - 0x00007ffc16fd5000 	C:\WINDOWS\system32\KERNELBASE.dll
+0x00007ffc196b0000 - 0x00007ffc19827000 	C:\WINDOWS\system32\USER32.dll
+0x00007ffc149d0000 - 0x00007ffc14c4b000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.9600.19394_none_62486577ecb635cf\COMCTL32.dll
+0x00007ffc193f0000 - 0x00007ffc1953c000 	C:\WINDOWS\system32\GDI32.dll
+0x00007ffc17040000 - 0x00007ffc170ea000 	C:\WINDOWS\system32\msvcrt.dll
+0x00007ffc19540000 - 0x00007ffc19576000 	C:\WINDOWS\system32\IMM32.DLL
+0x00007ffc19280000 - 0x00007ffc193d1000 	C:\WINDOWS\system32\MSCTF.dll
+0x00007ffc0ba70000 - 0x00007ffc0ba86000 	C:\sonar-scanner-4.4.0.2170-windows\jre\bin\vcruntime140.dll
+0x00007ffbfd810000 - 0x00007ffbfd814000 	C:\sonar-scanner-4.4.0.2170-windows\jre\bin\api-ms-win-crt-runtime-l1-1-0.dll
+0x00007ffbfd6d0000 - 0x00007ffbfd6d4000 	C:\sonar-scanner-4.4.0.2170-windows\jre\bin\api-ms-win-crt-string-l1-1-0.dll
+0x00007ffbfd6c0000 - 0x00007ffbfd6c3000 	C:\sonar-scanner-4.4.0.2170-windows\jre\bin\api-ms-win-crt-heap-l1-1-0.dll
+0x00007ffbfd5e0000 - 0x00007ffbfd5e4000 	C:\sonar-scanner-4.4.0.2170-windows\jre\bin\api-ms-win-crt-stdio-l1-1-0.dll
+0x00007ffbfd5d0000 - 0x00007ffbfd5d4000 	C:\sonar-scanner-4.4.0.2170-windows\jre\bin\api-ms-win-crt-convert-l1-1-0.dll
+0x00007ffbfd200000 - 0x00007ffbfd2fa000 	C:\sonar-scanner-4.4.0.2170-windows\jre\bin\ucrtbase.DLL
+0x00007ffbfd160000 - 0x00007ffbfd1fb000 	C:\sonar-scanner-4.4.0.2170-windows\jre\bin\msvcp140.dll
+0x00007ffbfd590000 - 0x00007ffbfd593000 	C:\sonar-scanner-4.4.0.2170-windows\jre\bin\api-ms-win-crt-locale-l1-1-0.dll
+0x00007ffbfd580000 - 0x00007ffbfd585000 	C:\sonar-scanner-4.4.0.2170-windows\jre\bin\api-ms-win-crt-math-l1-1-0.dll
+0x00007ffbfd570000 - 0x00007ffbfd573000 	C:\sonar-scanner-4.4.0.2170-windows\jre\bin\api-ms-win-crt-time-l1-1-0.dll
+0x00007ffbfd560000 - 0x00007ffbfd563000 	C:\sonar-scanner-4.4.0.2170-windows\jre\bin\api-ms-win-crt-filesystem-l1-1-0.dll
+0x00007ffbfd550000 - 0x00007ffbfd553000 	C:\sonar-scanner-4.4.0.2170-windows\jre\bin\api-ms-win-crt-environment-l1-1-0.dll
+0x00007ffbfd540000 - 0x00007ffbfd543000 	C:\sonar-scanner-4.4.0.2170-windows\jre\bin\api-ms-win-crt-utility-l1-1-0.dll
+0x00007ffbe3c30000 - 0x00007ffbe46e4000 	C:\sonar-scanner-4.4.0.2170-windows\jre\bin\server\jvm.dll
+0x00007ffc18be0000 - 0x00007ffc18c8a000 	C:\WINDOWS\system32\ADVAPI32.dll
+0x00007ffc0d230000 - 0x00007ffc0d239000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffc06350000 - 0x00007ffc06372000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffc0f940000 - 0x00007ffc0f94a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffc18df0000 - 0x00007ffc18df7000 	C:\WINDOWS\system32\PSAPI.DLL
+0x00007ffc19650000 - 0x00007ffc196a9000 	C:\WINDOWS\SYSTEM32\sechost.dll
+0x00007ffc18cb0000 - 0x00007ffc18df0000 	C:\WINDOWS\system32\RPCRT4.dll
+0x00007ffc18e00000 - 0x00007ffc18e5a000 	C:\WINDOWS\system32\WS2_32.dll
+0x00007ffc06320000 - 0x00007ffc0634a000 	C:\WINDOWS\SYSTEM32\WINMMBASE.dll
+0x00007ffc16d30000 - 0x00007ffc16d5e000 	C:\WINDOWS\system32\SspiCli.dll
+0x00007ffc193e0000 - 0x00007ffc193e9000 	C:\WINDOWS\system32\NSI.dll
+0x00007ffc16d60000 - 0x00007ffc16daf000 	C:\WINDOWS\SYSTEM32\cfgmgr32.dll
+0x00007ffc158c0000 - 0x00007ffc158e8000 	C:\WINDOWS\SYSTEM32\DEVOBJ.dll
+0x00007ffbfd530000 - 0x00007ffbfd540000 	C:\sonar-scanner-4.4.0.2170-windows\jre\bin\verify.dll
+0x00007ffbf82f0000 - 0x00007ffbf8479000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffbfd130000 - 0x00007ffbfd158000 	C:\sonar-scanner-4.4.0.2170-windows\jre\bin\java.dll
+0x00007ffbfd4c0000 - 0x00007ffbfd4d6000 	C:\sonar-scanner-4.4.0.2170-windows\jre\bin\zip.dll
+0x00007ffbfd120000 - 0x00007ffbfd12a000 	C:\sonar-scanner-4.4.0.2170-windows\jre\bin\jimage.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\sonar-scanner-4.4.0.2170-windows\jre\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.9600.19394_none_62486577ecb635cf;C:\sonar-scanner-4.4.0.2170-windows\jre\bin\server
+
+VM Arguments:
+jvm_args: -Djava.awt.headless=true -Dscanner.home=C:\sonar-scanner-4.4.0.2170-windows\bin\.. -Dproject.home=C:\Users\Gary\Documents\2S 2020\SA\lab\Practica7_SA 
+java_command: org.sonarsource.scanner.cli.Main -Dsonar.projectKey=com-example:SA -Dsonar.sources=. -Dsonar.host.url=http://localhost:9123 -Dsonar.login=ac995574fb4d8e0b3b91c2851a1cddb2672d1b21
+java_class_path (initial): C:\sonar-scanner-4.4.0.2170-windows\bin\..\lib\sonar-scanner-cli-4.4.0.2170.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 3                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 4                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 134217728                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 2120220672                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5830092                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122914074                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122914074                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\sonar-scanner-4.4.0.2170-windows\bin\..\jre
+PATH=C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\;C:\Program Files (x86)\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\PrivateAssemblies\;C:\Program Files (x86)\Graphviz 2.28\bin;C:\Users\Gary\Documents\Compiladores 2\Segunda Vez\javacc-5.0\bin;C:\xampp\php;C:\ProgramData\ComposerSetup\bin;C:\Program Files\Git\cmd;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Users\Gary\Documents\javacc-5.0\bin;C:\Program Files\nodejs\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Java\jdk-11.0.8\bin;C:\sonar-scanner-4.4.0.2170-windows\bin;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\sonarqube-8.4.2.36762\bin\windows-x86-64;C:\sonar-scanner-4.4.0.2170-windows\bin;C:\Users\Gary\AppData\Local\Programs\Python\Python38-32\Scripts\;C:\Users\Gary\AppData\Local\Programs\Python\Python38-32\;C:\Program Files\Java\jdk-11.0.8\bin;C:\Program Files (x86)\GnuWin32\bin;C:\MinGW\bin;C:\Program Files\Microsoft VS Code\bin;C:\Program Files (x86)\Graphviz 
+USERNAME=Gary
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 78 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 8.1 , 64 bit Build 9600 (6.3.9600.19358)
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 78 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx, fma
+
+Memory: 4k page, system-wide physical 8083M (840M free)
+TotalPageFile size 8083M (AvailPageFile size 28M)
+current process WorkingSet (physical memory assigned to process): 8M, peak: 8M
+current process commit charge ("private bytes"): 51M, peak: 179M
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.3+7) for windows-amd64 JRE (11.0.3+7), built on Apr 18 2019 09:08:27 by "" with MS VC++ 15.8 (VS2017)
+
+END.

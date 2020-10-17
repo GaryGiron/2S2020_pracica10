@@ -1,0 +1,297 @@
+Lanzada por el usuario Gary Giron
+Obtained Jenkinsfile from git https://github.com/GaryGiron/2S2020SA_SEMVER_201403997.git
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins  in C:\WINDOWS\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\nodeTest
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+The recommended git tool is: git.exe
+No credentials specified
+ > git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url https://github.com/GaryGiron/2S2020SA_SEMVER_201403997.git # timeout=10
+Fetching upstream changes from https://github.com/GaryGiron/2S2020SA_SEMVER_201403997.git
+ > git.exe --version # timeout=10
+ > git --version # 'git version 2.20.1.windows.1'
+ > git.exe fetch --tags --force --progress -- https://github.com/GaryGiron/2S2020SA_SEMVER_201403997.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+Checking out Revision e180c61c133a2336f68e7c861ba970a810b1d488 (refs/remotes/origin/master)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f e180c61c133a2336f68e7c861ba970a810b1d488 # timeout=10
+Commit message: "Actualizacion de ruta artefacto"
+ > git.exe rev-list --no-walk e180c61c133a2336f68e7c861ba970a810b1d488 # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Test)
+[Pipeline] dir
+Running in C:/Users/Gary/Documents/2S 2020/SA/lab/Practica7_SA
+[Pipeline] {
+[Pipeline] echo
+Testing..
+[Pipeline] bat
+
+C:\Users\Gary\Documents\2S 2020\SA\lab\Practica7_SA>npm run coverage 
+
+> practica5_sa@1.0.0 coverage C:\Users\Gary\Documents\2S 2020\SA\lab\Practica7_SA
+> nyc --reporter=lcov --reporter=text-lcov npm test
+
+
+> practica5_sa@1.0.0 test C:\Users\Gary\Documents\2S 2020\SA\lab\Practica7_SA
+> nyc ./node_modules/.bin/mocha test
+
+
+
+  Module Cash
+    âˆš Should have a getChange Method
+    âˆš Should getChange(210,300) equal
+    âˆš Should getChange(406,1000) equal
+    âˆš Should getChange(1487,10000) equal
+    âˆš Should getChange(random,str) equal
+
+  Prueba Unitaria 1
+    âˆš Creacion de un pedido
+
+  Prueba Unitaria 2
+    âˆš Pedir status al repartidor
+
+  Prueba Unitaria 3
+    âˆš Pedir status al restaurante
+
+  Prueba Unitaria 4
+    âˆš Completar pedido
+
+
+  9 passing (55ms)
+
+----------|---------|----------|---------|---------|-------------------
+File      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+----------|---------|----------|---------|---------|-------------------
+All files |   94.74 |      100 |      50 |   93.75 |                   
+ cash.js  |   94.74 |      100 |      50 |   93.75 | 22                
+----------|---------|----------|---------|---------|-------------------
+TN:
+SF:cash.js
+FN:4,(anonymous_0)
+FN:21,(anonymous_1)
+FNF:2
+FNH:1
+FNDA:4,(anonymous_0)
+FNDA:0,(anonymous_1)
+DA:1,1
+DA:2,1
+DA:4,1
+DA:5,4
+DA:6,4
+DA:7,4
+DA:8,44
+DA:9,44
+DA:10,16
+DA:11,16
+DA:12,21
+DA:13,21
+DA:18,4
+DA:21,1
+DA:22,0
+DA:25,1
+LF:16
+LH:15
+BRDA:9,0,0,16
+BRDA:9,0,1,28
+BRF:2
+BRH:2
+end_of_record
+[Pipeline] }
+[Pipeline] // dir
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Analysis)
+[Pipeline] dir
+Running in C:/Users/Gary/Documents/2S 2020/SA/lab/Practica7_SA
+[Pipeline] {
+[Pipeline] echo
+Analysis..
+[Pipeline] bat
+
+C:\Users\Gary\Documents\2S 2020\SA\lab\Practica7_SA>sonar-scanner.bat -D"sonar.projectKey=com-example:SA" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9123" -D"sonar.login=ac995574fb4d8e0b3b91c2851a1cddb2672d1b21" 
+INFO: Scanner configuration file: C:\sonar-scanner-4.4.0.2170-windows\bin\..\conf\sonar-scanner.properties
+INFO: Project root configuration file: NONE
+INFO: SonarScanner 4.4.0.2170
+INFO: Java 11.0.3 AdoptOpenJDK (64-bit)
+INFO: Windows 8.1 6.3 amd64
+INFO: User cache: C:\WINDOWS\system32\config\systemprofile\.sonar\cache
+INFO: Scanner configuration file: C:\sonar-scanner-4.4.0.2170-windows\bin\..\conf\sonar-scanner.properties
+INFO: Project root configuration file: NONE
+INFO: Analyzing on SonarQube server 8.4.2
+INFO: Default locale: "es_GT", source code encoding: "windows-1252" (analysis is platform dependent)
+INFO: Load global settings
+INFO: Load global settings (done) | time=78ms
+INFO: Server id: BF41A1F2-AXSSxPIn3tsigQelfWin
+INFO: User cache: C:\WINDOWS\system32\config\systemprofile\.sonar\cache
+INFO: Load/download plugins
+INFO: Load plugins index
+INFO: Load plugins index (done) | time=62ms
+INFO: Load/download plugins (done) | time=156ms
+INFO: Process project properties
+INFO: Process project properties (done) | time=16ms
+INFO: Execute project builders
+INFO: Execute project builders (done) | time=0ms
+INFO: Project key: com-example:SA
+INFO: Base dir: C:\Users\Gary\Documents\2S 2020\SA\lab\Practica7_SA
+INFO: Working dir: C:\Users\Gary\Documents\2S 2020\SA\lab\Practica7_SA\.scannerwork
+INFO: Load project settings for component key: 'com-example:SA'
+INFO: Load project settings for component key: 'com-example:SA' (done) | time=15ms
+INFO: Load quality profiles
+INFO: Load quality profiles (done) | time=47ms
+INFO: Auto-configuring with CI 'Jenkins'
+INFO: Load active rules
+INFO: Load active rules (done) | time=1047ms
+INFO: Indexing files...
+INFO: Project configuration:
+INFO: Load project repositories
+INFO: Load project repositories (done) | time=32ms
+INFO: 86 files indexed
+INFO: 17782 files ignored because of scm ignore settings
+INFO: Quality profile for css: Sonar way
+INFO: Quality profile for js: Sonar way
+INFO: Quality profile for web: Sonar way
+INFO: Quality profile for xml: Sonar way
+INFO: ------------- Run sensors on module com-example:SA
+INFO: Load metrics repository
+INFO: Load metrics repository (done) | time=47ms
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by net.sf.cglib.core.ReflectUtils$1 (file:/C:/WINDOWS/system32/config/systemprofile/.sonar/cache/52f5340dd05620cd162e2b9a45a57124/sonar-javascript-plugin.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of net.sf.cglib.core.ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+INFO: Sensor SonarCSS Metrics [cssfamily]
+INFO: Sensor SonarCSS Metrics [cssfamily] (done) | time=125ms
+INFO: Sensor SonarCSS Rules [cssfamily]
+INFO: 7 source files to be analyzed
+INFO: 7/7 source files have been analyzed
+INFO: Sensor SonarCSS Rules [cssfamily] (done) | time=11767ms
+INFO: Sensor JaCoCo XML Report Importer [jacoco]
+INFO: 'sonar.coverage.jacoco.xmlReportPaths' is not defined. Using default locations: target/site/jacoco/jacoco.xml,target/site/jacoco-it/jacoco.xml,build/reports/jacoco/test/jacocoTestReport.xml
+INFO: No report imported, no coverage information will be imported by JaCoCo XML Report Importer
+INFO: Sensor JaCoCo XML Report Importer [jacoco] (done) | time=0ms
+INFO: Sensor JavaScript analysis [javascript]
+INFO: 21 source files to be analyzed
+INFO: 21/21 source files have been analyzed
+INFO: Sensor SonarJS [javascript]
+INFO: 21 source files to be analyzed
+INFO: Sensor SonarJS [javascript] (done) | time=1244ms
+INFO: 21/21 source files have been analyzed
+INFO: Sensor JavaScript analysis [javascript] (done) | time=22793ms
+INFO: Sensor JavaXmlSensor [java]
+INFO: 2 source files to be analyzed
+INFO: 2/2 source files have been analyzed
+INFO: Sensor JavaXmlSensor [java] (done) | time=234ms
+INFO: Sensor HTML [web]
+INFO: Sensor HTML [web] (done) | time=230ms
+INFO: Sensor XML Sensor [xml]
+INFO: 2 source files to be analyzed
+INFO: Sensor XML Sensor [xml] (done) | time=181ms
+INFO: 2/2 source files have been analyzed
+INFO: ------------- Run sensors on project
+INFO: Sensor Zero Coverage Sensor
+INFO: Sensor Zero Coverage Sensor (done) | time=74ms
+INFO: SCM Publisher SCM provider for this project is: git
+INFO: SCM Publisher 2 source files to be analyzed
+INFO: SCM Publisher 0/2 source files have been analyzed (done) | time=178ms
+WARN: Missing blame information for the following files:
+WARN:   * coverage/lcov-report/index.html
+WARN:   * coverage/lcov-report/cash.js.html
+WARN: This may lead to missing/broken features in SonarQube
+INFO: CPD Executor 6 files had no CPD blocks
+INFO: CPD Executor Calculating CPD for 17 files
+INFO: CPD Executor CPD calculation finished (done) | time=46ms
+INFO: Analysis report generated in 110ms, dir size=193 KB
+INFO: Analysis report compressed in 110ms, zip size=80 KB
+INFO: Analysis report uploaded in 31ms
+INFO: ANALYSIS SUCCESSFUL, you can browse http://localhost:9123/dashboard?id=com-example%3ASA
+INFO: Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+INFO: More about the report processing at http://localhost:9123/api/ce/task?id=AXTIdEWKNvwoiJ1sd-vy
+INFO: Analysis total time: 1:03.039 s
+INFO: ------------------------------------------------------------------------
+INFO: EXECUTION SUCCESS
+INFO: ------------------------------------------------------------------------
+INFO: Total time: 1:04.727s
+INFO: Final Memory: 15M/57M
+INFO: ------------------------------------------------------------------------
+[Pipeline] }
+[Pipeline] // dir
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] dir
+Running in C:/Users/Gary/Documents/2S 2020/SA/lab/Practica7_SA
+[Pipeline] {
+[Pipeline] echo
+Building..
+[Pipeline] bat
+
+C:\Users\Gary\Documents\2S 2020\SA\lab\Practica7_SA>call C:\node_modules\gulp\node_modules\.bin\gulp 
+[[90m21:28:26[39m] Using gulpfile C:\Users\Gary\Documents\2S 2020\SA\lab\Practica7_SA\gulpfile.js
+[[90m21:28:26[39m] Starting 'default'...
+[[90m21:28:26[39m] Starting 'zipper'...
+[[90m21:28:26[39m] Finished 'zipper' after 57 ms
+[[90m21:28:26[39m] Finished 'default' after 59 ms
+[Pipeline] }
+[Pipeline] // dir
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Deploy)
+[Pipeline] dir
+Running in C:/Users/Gary/Documents/2S 2020/SA/lab/Practica7_SA
+[Pipeline] {
+[Pipeline] echo
+Deploying....
+[Pipeline] bat
+
+C:\Users\Gary\Documents\2S 2020\SA\lab\Practica7_SA>cd .. 
+
+C:\Users\Gary\Documents\2S 2020\SA\lab>call git clone https://github.com/GaryGiron/2S2020SA_artefactosApp.git 
+Cloning into '2S2020SA_artefactosApp'...
+
+C:\Users\Gary\Documents\2S 2020\SA\lab>copy Practica7_SA\dist\app.zip 2S2020SA_artefactosApp 
+        1 archivo(s) copiado(s).
+
+C:\Users\Gary\Documents\2S 2020\SA\lab>cd 2S2020SA_artefactosApp 
+
+C:\Users\Gary\Documents\2S 2020\SA\lab\2S2020SA_artefactosApp>call git add . 
+
+C:\Users\Gary\Documents\2S 2020\SA\lab\2S2020SA_artefactosApp>call git config user.email "gsteph393@gmail.com" 
+
+C:\Users\Gary\Documents\2S 2020\SA\lab\2S2020SA_artefactosApp>call git config user.name "GaryGiron" 
+
+C:\Users\Gary\Documents\2S 2020\SA\lab\2S2020SA_artefactosApp>call git commit -m "Nuevos artefactos" 
+[master e88ebef] Nuevos artefactos
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 app.zip
+
+C:\Users\Gary\Documents\2S 2020\SA\lab\2S2020SA_artefactosApp>call git push origin master 
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 10.91 MiB | 365.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+To https://github.com/GaryGiron/2S2020SA_artefactosApp.git
+   99646b3..e0f2837  master -> master
+
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS

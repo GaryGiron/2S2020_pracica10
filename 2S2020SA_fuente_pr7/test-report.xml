@@ -1,0 +1,8 @@
+<testExecutions version="1">
+<file path="test\test.js">
+<testCase name="Prueba Unitaria 1: Creacion de un pedido" duration="34"/>
+<testCase name="Prueba Unitaria 2: Pedir status al repartidor" duration="21"/>
+<testCase name="Prueba Unitaria 3: Pedir status al restaurante" duration="10"/>
+<testCase name="Prueba Unitaria 4: Completar pedido" duration="3"/>
+</file>
+</testExecutions>
